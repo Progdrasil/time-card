@@ -5,4 +5,4 @@ authors = ["René Léveillé <rene.leveille@polymtl.ca>"]
 edition = "2018"
 
 [dependencies]
-azul = { git = "https://github.com/maps4print/azul" }
+app_dirs 	= "^1.2.1"
