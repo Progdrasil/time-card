@@ -5,4 +5,8 @@ authors = ["René Léveillé <rene.leveille@polymtl.ca>"]
 edition = "2018"
 
 [dependencies]
-app_dirs 	= "^1.2.1"
+app_dirs 	= "1"
+chrono		= { version = "0.4", features = ["serde"] }
+csv			= "1"
+serde		= "1"
+serde_derive= "1"
