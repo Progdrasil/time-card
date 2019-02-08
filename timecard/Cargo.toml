@@ -1,5 +1,5 @@
 [package]
-name = "time-card"
+name = "timecard"
 version = "0.1.0"
 authors = ["René Léveillé <rene.leveille@polymtl.ca>"]
 edition = "2018"
@@ -10,3 +10,5 @@ chrono		= { version = "0.4", features = ["serde"] }
 csv			= "1"
 serde		= "1"
 serde_derive= "1"
+sled		= "0.18"
+structopt	= "0.2"

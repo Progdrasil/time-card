@@ -1,6 +1,22 @@
-use chrono::Local;
+#[macro_use]
+extern crate structopt;
 
-use time_card::*;
+use chrono::Local;
+use structopt::StructOpt;
+
+use timecard::models;
+
+#[derive(Debug, StructOpt)]
+#[structopt(name = "TimeCard", about = "A time management cli application, similar to timetrap", version = "0.1.0", author = "Rene Leveille")]
+enum Opt {
+	/// clock in an action
+	#[structopt(name = "in")]
+	In {
+		#[structopt(name = "note")]
+		note: String,
+	}
+
+}
 
 fn main() {
 	let action = models::Action {
@@ -29,5 +45,7 @@ fn main() {
 		tasks: vec![task],
 	};
 
-	println!("{:#?}", day);
+	let opt = Opt::from_args();
+
+	println!("{:#?}", opt);
 }
